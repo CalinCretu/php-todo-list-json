@@ -27,11 +27,11 @@
         <div class="container">
           <ul class="todos">
             <!-- direttiva v-for che cicla l'array todos -->
-            <li class="todos__item" :class="{ 
+            <li  class="todos__item" :class="{ 
               done: todo.done
-              }" v-for="(todo, i) in todos" :key="i">
+              }" v-for="(todo, i) in todos" :key="i" :index="index">
               <span>{{todo.text}}</span>
-              <span>elimina</span>
+              <span v-on:click="removeTask(todos.index)">elimina</span>
             </li>
           </ul>
         </div>
