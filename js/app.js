@@ -32,7 +32,7 @@ createApp({
         },
       })
         .then((res) => {
-          this.todos = res.data.todos['text'];
+          this.todos = res.data.todos;
           this.newTodo = '';
         })
     },
