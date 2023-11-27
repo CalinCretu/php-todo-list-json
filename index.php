@@ -29,9 +29,9 @@
             <!-- direttiva v-for che cicla l'array todos -->
             <li  class="todos__item" :class="{ 
               done: todo.done
-              }" v-for="(todo, i) in todos" :key="i" :index="index">
+              }" v-for="(todo, i) in todos" :key="i">
               <span>{{todo.text}}</span>
-              <span v-on:click="removeTask(todos.index)">elimina</span>
+              <span @click="removeTask(i)">elimina</span>
             </li>
           </ul>
         </div>

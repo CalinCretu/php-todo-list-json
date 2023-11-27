@@ -40,10 +40,8 @@ createApp({
         })
     },
     removeTask(index) {
-      console.log(index)
-      // Rimuovi il task dall'array
       this.todos.splice(index, 1);
-    },
+    }
   },
   // eseguiamo la funzione fetchData() invocandola
   created() {
