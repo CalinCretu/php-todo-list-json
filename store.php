@@ -22,7 +22,7 @@ $todos = json_decode($todos_string, true);
 
 $todos[] = $todo; 
 
-$response ['todos'] = $todos;
+$response ['results'] = $todos;
 
 // risalvare il file
 // - codificare la stringa json dall'array di todos
@@ -34,7 +34,7 @@ $todos_string = json_encode($todos);
 file_put_contents('./todos.json', $todos_string);
 } else {
 $response['success'] = false;
-$response['message'] = 'Todo params is required';
+$response['message'] = 'Valore non valido';
 };
 
 header('Content-Type: application/json');

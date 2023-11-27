@@ -32,8 +32,11 @@ createApp({
         },
       })
         .then((res) => {
-          this.todos = res.data.todos;
-          this.newTodo = '';
+          console.log(res.data.success);
+          if (res.data.success === true) {
+            this.todos = res.data.results;
+            this.newTodo = '';
+          }
         })
     },
   },

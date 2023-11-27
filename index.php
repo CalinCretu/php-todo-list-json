@@ -20,7 +20,7 @@
           <h1>{{title}}</h1>
         <!-- input che all'invio faremo la chiamata che agginge una todo al array -->
         <!-- v-model collegato a variabile file js -->
-        <input type="text" placeholder="Nuova ToDo" v-model="newTodo" @keyup.enter="storeTodo">
+        <input type="text" placeholder="Nuova ToDo" v-model.trim="newTodo" @keyup.enter="storeTodo">
         </div>
       </section>
       <section>
