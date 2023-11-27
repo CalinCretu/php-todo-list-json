@@ -12,29 +12,29 @@ $response = [
 ];
 
 if ($new_todo) {
-// leggere il contenuto del file json
-$todos_string = file_get_contents('./todos.json');
+  // leggere il contenuto del file json
+  $todos_string = file_get_contents('./todos.json');
 
-// decodificare il file json per ottenere un array di todos
-$todos = json_decode($todos_string, true);
+  // decodificare il file json per ottenere un array di todos
+  $todos = json_decode($todos_string, true);
 
-//pushare la nuova todo nell'array
+  //pushare la nuova todo nell'array
 
-$todos[] = $todo; 
+  $todos[] = $todo;
 
-$response ['results'] = $todos;
+  $response['results'] = $todos;
 
-// risalvare il file
-// - codificare la stringa json dall'array di todos
+  // risalvare il file
+  // - codificare la stringa json dall'array di todos
 
-$todos_string = json_encode($todos);
+  $todos_string = json_encode($todos);
 
-// - salvare il file con il nuovo contenuto
+  // - salvare il file con il nuovo contenuto
 
-file_put_contents('./todos.json', $todos_string);
+  file_put_contents('./todos.json', $todos_string);
 } else {
-$response['success'] = false;
-$response['message'] = 'Valore non valido';
+  $response['success'] = false;
+  $response['message'] = 'Valore non valido';
 };
 
 header('Content-Type: application/json');

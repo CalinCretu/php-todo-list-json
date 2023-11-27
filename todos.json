@@ -22,5 +22,9 @@
   {
     "text": "123",
     "done": false
+  },
+  {
+    "text": "aggiungi",
+    "done": false
   }
 ]
