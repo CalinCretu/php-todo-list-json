@@ -10,12 +10,23 @@ section {
 }
 
 .container {
-  max-width: 800px;
+  max-width: 400px;
   margin: 0 auto;
 }
 
 ul,
-li,
+ol,
 menu {
   list-style: none;
+}
+
+.todos__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 0;
+}
+
+.todos__item.done :first-child {
+  text-decoration: line-through;
 }

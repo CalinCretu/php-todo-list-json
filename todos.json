@@ -15,6 +15,8 @@
     "text": "CSS",
     "done": true
   },
-  "asd",
-  "sdfgdf"
+  {
+    "text": "ciao",
+    "done": false
+  }
 ]
